@@ -4481,12 +4481,134 @@
     </div>
 
     <div id="characterFields" style="display: none">
-      <!-- Fields for "character" option -->
+      <!-- #Character Start -->
 
-      <!-- Name Set Up -->
+      <!-- Character Name -->
+      <label for="chrName">Your Custom Character Name (ALL CAPS)</label>
+      <input type="text" id="chrName" placeholder="TSUKI SUMISU"><br>
 
-      <label for="chrName">Your Custom Character Name</label>
-      <input type="text" id="chrName" placeholder="Tsuki Sumisu"><br>
+      <!-- Creator -->
+      <label for="chrAuthor">Creators Name</label>
+      <input type="text" id="chrAuthor" placeholder="Mortal Pixel"><br>
+
+      <!-- Creator Contact -->
+      <label for="chrContact">Creators Contact</label>
+      <input type="text" id="chrContact" placeholder="@MortalPixel"><br>
+
+      <!-- Character Stats -->
+      <!-- Strength -->
+      <label for="STATS">Character Stats<br>An Average character has a stat pool of 39 with 6 in Luck</label>
+      <label for="chrSTR">Strength Stat</label>
+      <input type="text" id="chrSTR" placeholder="4"><br>
+
+      <!-- Dexterity -->
+      <label for="chrDEX">Dexterity Stat</label>
+      <input type="text" id="chrDEX" placeholder="8"><br>
+
+      <!-- Perception -->
+      <label for="chrPER">Perception Stat</label>
+      <input type="text" id="chrPER" placeholder="6"><br>
+
+      <!-- Charisma -->
+      <label for="chrCHA">Charisma Stat</label>
+      <input type="text" id="chrCHA" placeholder="8"><br>
+
+      <!-- Knowledge -->
+      <label for="chrKNW">Knowledge Stat</label>
+      <input type="text" id="chrKNW" placeholder="7"><br>
+
+      <!-- Luck -->
+      <label for="chrLCK">Luck Stat [Hidden]</label>
+      <input type="text" id="chrLCK" placeholder="6"><br>
+
+      <!-- Sprite Icon-->
+      <label for="chrIcon">Sprite Icon</label>
+      <input type="text" id="chrIcon" placeholder="chr_name/spricon.png"><br>
+
+      <!-- Sprite Back -->
+      <label for="chrSpBack">Sprite Back</label>
+      <input type="text" id="chrSpBack" placeholder="chr_name/spriback.png"><br>
+
+      <!-- Sprite House -->
+      <label for="chrSpHome">Home Sprite</label>
+      <input type="text" id="chrSpHome" placeholder="chr_name/sprihome.png"><br>
+
+      <!-- Portrait A -->
+      <label for="chrPorA">Portrait A</label>
+      <input type="text" id="chrPorA" placeholder="Portrait A"><br>
+
+      <!-- Name A -->
+      <label for="chrNameA">Name of A</label>
+      <input type="text" id="chrNameA" placeholder="Name A"><br>
+
+      <label for="chrPorB">Portrai B</label>
+      <input type="text" id="chrPorB" placeholder="Portrait B"><br>
+
+      <label for="chrNameB">Name of B</label>
+      <input type="text" id="chrNameB" placeholder="Name B"><br>
+
+      <label for="chrSpChibi">Chibi Sprite</label>
+      <input type="text" id="chrSpChibi" placeholder="chr_name/chibi.png"><br>
+
+      <label for="chrMenuTag">Menu Tag</label>
+      <input type="text" id="chrMenuTag" placeholder="Menu Tag"><br>
+
+      <label for="chrMenuDesc">Menu Description</label>
+      <input type="text" id="chrMenuDesc" placeholder="Menu Description"><br>
+
+      <label for="chrPerkPA">Perk Pack A</label>
+      <input type="text" id="chrPerkPA" placeholder="Perk Pack A"><br>
+
+      <label for="chrPerkPB">Perk Pack B</label>
+      <input type="text" id="chrPerkPB" placeholder="Perk Pack B"><br><br>
+
+      <label for="chrLStam">Low Stam Art</label>
+      <input type="text" id="chrLStam" placeholder="chr_Name/low_Sta.png"><br>
+
+      <label for="chrLRea">Low Reason Art</label>
+      <input type="text" id="chrLRea" placeholder="chr_Name/low_Rea.png"><br>
+
+      <label for="chrRitualM">Ritual Mask Art</label>
+      <input type="text" id="chrRitualM" placeholder="chr_Name/RitualMask.png"><br>
+
+      <label for="chrKarukosaM">Karukosa Mask Art</label>
+      <input type="text" id="chrKarukosaM" placeholder="chr_Name/KarukosaMask.png"><br>
+
+      <label for="chrCrestFM">Crestfallen Mask Art</label>
+      <input type="text" id="chrCrestFM" placeholder="chr_Name/CrestMask.png"><br>
+
+      <label for="chrCursedS">Cursed Seals Art</label>
+      <input type="text" id="chrCursedS" placeholder="chr_Name/CursedSeal.png"><br>
+
+      <label for="chrBrokeN">Broken Nose Art</label>
+      <input type="text" id="chrBrokeN" placeholder="chr_Name/BrokenNose.png"><br>
+
+      <label for="chrInsmasu">Insmasu Art</label>
+      <input type="text" id="chrInsmasu" placeholder="chr_Name/Insamasu.png"><br>
+
+      <label for="chrSlitM">Slit Mouth Art</label>
+      <input type="text" id="chrSlitM" placeholder="chr_Name/Slit.png"><br>
+
+      <label for="chrHunger">The Hunger Art</label>
+      <input type="text" id="chrHunger" placeholder="chr_Name/hunger.png"><br><br>
+
+      <label for="chrTypeA">Type A</label>
+      <input type="text" id="chrTypeA" placeholder="Type A"><br>
+
+      <label for="chrSBNamA">Name A</label>
+      <input type="text" id="chrSBNamA" placeholder="Name A"><br>
+
+      <label for="chrTypeB">Type B</label>
+      <input type="text" id="chrTypeB" placeholder="Type B"><br>
+
+      <label for="chrSBNamB">Name B</label>
+      <input type="text" id="chrSBNamB" placeholder="Name B"><br><br>
+
+      <label for="chrEventA">Linked Event</label>
+      <input type="text" id="chrEventA" placeholder="event.ito"><br>
+
+      <label for="chrLocA">Linked Location</label>
+      <input type="text" id="chrLocA" placeholder="Location Drop Down?"><br>
 
       <!-- End "character" option-->
     </div>
@@ -6291,7 +6413,7 @@
 
       var evtTestB = trimValue(document.getElementById("evtTestB").value);
 
-      if (evtOptionsValue === "2" || evtOptionsValue === "3"){
+      if (evtOptionsValue === "2" || evtOptionsValue === "3") {
         textToSave = addValueToText(textToSave, "testb", evtTestB);
       }
 
@@ -6350,7 +6472,7 @@
         alert(
           "Prize B Miss Match in Win B (You tried to give a Input Reward without actually giving an input. Return to 'Win B: Value for Stamina, Reason, Doom, EXP, Funds' and give a '+' or '-' with a 'number value'. Note: File will continue to save but will be broken."
         );
-      } else if ( 
+      } else if (
         evtWRewardB_Value !== "" &&
         (evtWRewardB === "stamina" ||
           evtWRewardB === "reason" ||
@@ -7059,7 +7181,7 @@
 
       var evtTestC = trimValue(document.getElementById("evtTestC").value);
 
-      if (evtOptionsValue === "3"){
+      if (evtOptionsValue === "3") {
         textToSave = addValueToText(textToSave, "testc", evtTestC);
       }
 
@@ -7862,11 +7984,179 @@
       textToSave = addValueToText(textToSave, "artfreq", enmFreq);
     }
     // End of Enemy Script
-    
+
     // #Character Script
     // Character Fields Variables
+
+    // Character Name
     var chrName = trimValue(document.getElementById("chrName").value);
     textToSave = addValueToText(textToSave, "name", chrName);
+
+    // Character Creator
+    var chrAuthor = trimValue(document.getElementById("chrAuthor").value);
+    textToSave = addValueToText(textToSave, "author", chrAuthor);
+
+    // Creator Contact
+    var chrContact = trimValue(document.getElementById("chrContact").value);
+    textToSave = addValueToText(textToSave, "contact", chrContact);
+
+    // Character Stats
+    // STR
+    var chrSTR = trimValue(document.getElementById("chrSTR").value);
+    textToSave = addValueToText(textToSave, "strength", chrSTR);
+
+    // DEX
+    var chrDEX = trimValue(document.getElementById("chrDEX").value);
+    textToSave = addValueToText(textToSave, "dexterity", chrDEX);
+
+    // PER
+    var chrPER = trimValue(document.getElementById("chrPER").value);
+    textToSave = addValueToText(textToSave, "perception", chrPER);
+
+    // CHA
+    var chrCHA = trimValue(document.getElementById("chrCHA").value);
+    textToSave = addValueToText(textToSave, "charisma", chrCHA);
+
+    // KNW
+    var chrKNW = trimValue(document.getElementById("chrKNW").value);
+    textToSave = addValueToText(textToSave, "knowledge", chrKNW);
+
+    // LCK
+    var chrLCK = trimValue(document.getElementById("chrLCK").value);
+    textToSave = addValueToText(textToSave, "luck", chrLCK);
+
+    // Sprite Icon
+    var chrIcon = trimValue(document.getElementById("chrIcon").value);
+    textToSave = addValueToText(textToSave, "sprite_icon", chrIcon);
+
+    // Sprite Back
+    var chrSpBack = trimValue(document.getElementById("chrSpBack").value);
+    textToSave = addValueToText(textToSave, "sprite_back", chrSpBack);
+
+    // Sprite House
+    var chrSpHome = trimValue(document.getElementById("chrSpHome").value);
+    textToSave = addValueToText(textToSave, "sprite_house", chrSpHome);
+
+    // Portrait A
+    var chrPorA = trimValue(document.getElementById("chrPorA").value);
+    textToSave = addValueToText(textToSave, "portrait_a", chrPorA);
+
+    // Name A
+    var chrNameA = trimValue(document.getElementById("chrNameA").value);
+    textToSave = addValueToText(textToSave, "name_a", chrNameA);
+
+    // Portrait B
+    var chrPorB = trimValue(document.getElementById("chrPorB").value);
+    textToSave = addValueToText(textToSave, "portrait_b", chrPorB);
+
+    // Name B
+    var chrNameB = trimValue(document.getElementById("chrNameB").value);
+    textToSave = addValueToText(textToSave, "name_b", chrNameB);
+
+    // Sprite Chibi
+    var chrSpChibi = trimValue(document.getElementById("chrSpChibi").value);
+    textToSave = addValueToText(textToSave, "sprite_chibi", chrSpChibi);
+
+    // Menu Tag
+    var chrMenuTag = trimValue(document.getElementById("chrMenuTag").value);
+    textToSave = addValueToText(textToSave, "menu_tag", chrMenuTag);
+
+    // Menu Description
+    var chrMenuDesc = trimValue(document.getElementById("chrMenuDesc").value);
+    textToSave = addValueToText(textToSave, "menu_desc", chrMenuDesc);
+
+    // Perkpack A
+    var chrPerkPA = trimValue(document.getElementById("chrPerkPA").value);
+    textToSave = addValueToText(textToSave, "perkpack_a", chrPerkPA);
+
+    // Perkpack B
+    var chrPerkPB = trimValue(document.getElementById("chrPerkPB").value);
+    textToSave = addValueToText(textToSave, "perkpack_b", chrPerkPB);
+
+
+    // Add a separate line break
+    textToSave += "\n";
+
+    var chrStatus = "Status";
+    textToSave += "[" + chrStatus + "]\n";
+
+    // Low Stamina
+    var chrLStam = trimValue(document.getElementById("chrLStam").value);
+    textToSave = addValueToText(textToSave, "low_stamina", chrLStam);
+
+    // Low Reason
+    var chrLRea = trimValue(document.getElementById("chrLRea").value);
+    textToSave = addValueToText(textToSave, "low_reason", chrLRea);
+
+    // Ritual Mask
+    var chrRitualM = trimValue(document.getElementById("chrRitualM").value);
+    textToSave = addValueToText(textToSave, "ritual_mask", chrRitualM);
+
+    // Karukosa Mask
+    var chrKarukosaM = trimValue(document.getElementById("chrKarukosaM").value);
+    textToSave = addValueToText(textToSave, "karukosa_mask", chrKarukosaM);
+
+    // Crestfallen Mask
+    var chrCrestFM = trimValue(document.getElementById("chrCrestFM").value);
+    textToSave = addValueToText(textToSave, "crestfallen_mask", chrCrestFM);
+
+    // Cursed Signs
+    var chrCursedS = trimValue(document.getElementById("chrCursedS").value);
+    textToSave = addValueToText(textToSave, "cursed_signs", chrCursedS);
+
+    // Broken Nose
+    var chrBrokeN = trimValue(document.getElementById("chrBrokeN").value);
+    textToSave = addValueToText(textToSave, "broken_nose", chrBrokeN);
+
+    // Insmasu Look
+    var chrInsmasu = trimValue(document.getElementById("chrInsmasu").value);
+    textToSave = addValueToText(textToSave, "insmasu_look", chrInsmasu);
+
+    // Slit Mouth
+    var chrSlitM = trimValue(document.getElementById("chrSlitM").value);
+    textToSave = addValueToText(textToSave, "slit_mouth", chrSlitM);
+
+    // Hunger
+    var chrHunger = trimValue(document.getElementById("chrHunger").value);
+    textToSave = addValueToText(textToSave, "hunger", chrHunger);
+
+
+    // Add a separate line break
+    textToSave += "\n";
+
+    var chrBonus = "starting_bonus";
+    textToSave += "[" + chrBonus + "]\n";
+
+    // Type A
+    var chrTypeA = trimValue(document.getElementById("chrTypeA").value);
+    textToSave = addValueToText(textToSave, "type_a", chrTypeA);
+
+    // Name A
+    var chrSBNamA = trimValue(document.getElementById("chrSBNamA").value);
+    textToSave = addValueToText(textToSave, "name_a", chrSBNamA);
+
+    // Type B
+    var chrTypeB = trimValue(document.getElementById("chrTypeB").value);
+    textToSave = addValueToText(textToSave, "type_b", chrTypeB);
+
+    // Name B
+    var chrSBNamB = trimValue(document.getElementById("chrSBNamB").value);
+    textToSave = addValueToText(textToSave, "name_b", chrSBNamB);
+
+
+    // Add a separate line break
+    textToSave += "\n";
+
+    var chrLinked = "linked_events";
+    textToSave += "[" + chrLinked + "]\n";
+
+    // Event A
+    var chrEventA = trimValue(document.getElementById("chrEventA").value);
+    textToSave = addValueToText(textToSave, "event_a", chrEventA);
+
+    // Location A
+    var chrLocA = trimValue(document.getElementById("chrLocA").value);
+    textToSave = addValueToText(textToSave, "location_a", chrLocA);
 
     // End Character Script
 
