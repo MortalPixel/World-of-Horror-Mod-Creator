@@ -193,8 +193,7 @@
 
       <!-- Card A -->
 
-      <br><label for="mysCardA">Card A</label><br>
-      <input type="hidden" id="mysCardA" value="card_a">
+      <br><br><label for="mysCardA">Card A</label>
 
       <label for="mysCAName">Card Name:</label>
       <input type="text" id="mysCAName" placeholder="NAME IN CAPS (If empty will not save section to .ito)"><br>
@@ -365,8 +364,6 @@
       <!-- [progress] -->
 
       <br><label for="progress">Mystery Progress</label><br>
-
-      <input type="hidden" id="mysProgress" value="progress">
 
       <label for="mysProLoc">Mystery Location To Investigate</label>
       <input type="text" id="mysProLoc" placeholder="Mystery Location"><br>
@@ -5589,38 +5586,55 @@
     var textToSave = "[" + selectedOption + "]\n";
 
     if (selectedOption === "mystery") {
-      // Mystery
+      // Start Mystery Code
+      // #Mystery
 
+      // Mystery Name
       var mysName = trimValue(document.getElementById("mysName").value);
+      
       if (mysName !== "") {
         textToSave = addValueToText(textToSave, "name", mysName);
       }
 
+      // Mystery Creator
       var mysAuthor = trimValue(document.getElementById("mysAuthor").value);
+      
       if (mysAuthor !== "") {
         textToSave = addValueToText(textToSave, "author", mysAuthor);
       }
 
+      // Mystery Creator Contact Info
       var mysContact = trimValue(document.getElementById("mysContact").value);
+      
       if (mysContact !== "") {
         textToSave = addValueToText(textToSave, "contact", mysContact);
       }
 
-      var mysDescription = trimValue(
-        document.getElementById("mysDescription").value
-      );
+      // Mystery Description
+      var mysDescription = trimValue(document.getElementById("mysDescription").value);
+      
       if (mysDescription !== "") {
         textToSave = addValueToText(textToSave, "description", mysDescription);
       }
 
+      // Mystery Custom UI
+      var mysCUI = trimValue(document.getElementById("mysCUI").value);
+
+      if (mysCUI !== ""){
+        textToSave = addValueToText(textToSave, "custom_ui", mysCUI);
+      }
+
       // Mystery Music & Battle Theme Selection
 
+      // Background Music Variables
       var mysBGM = trimValue(document.getElementById("mysBGM").value);
       var mysBGM_Custom = trimValue(document.getElementById("mysBGM_Custom").value);
 
+      // Battle Music Variables
       var mysBattle = trimValue(document.getElementById("mysBattle").value);
       var mysBattle_Custom = trimValue(document.getElementById("mysBattle_Custom").value);
 
+      // Setting BGM Theme or Calling Custom Background Music if Selected
       if (mysBGM === "") {
         // Empty Do Nothing
       } else if (mysBGM !== "" && mysBGM !== "custom") {
@@ -5629,6 +5643,7 @@
         textToSave = addValueToText(textToSave, "mystery_sound", mysBGM_Custom);
       }
 
+      // Setting Battle Theme or Calling Custom Battle Music if Selected
       if (mysBattle === "") {
         // Empty Do Nothing
       } else if (mysBattle !== "" && mysBattle !== "custom") {
@@ -5637,14 +5652,16 @@
         textToSave = addValueToText(textToSave, "combat_sound", mysBattle_Custom);
       }
 
-      // Add a separate line break
+      // Adding a Line break for Fomatting Data in Save File
       textToSave += "\n";
 
-      // Restricted Locations
+      // #Mystery - Restricted Locations Section
 
+      // Setting Data Tag Restricted_Locations
       var mysPreRes = "restricted_locations";
       textToSave += "[" + mysPreRes + "]\n";
 
+      // Sets an Array that will toggle between 1 and 0
       const checkboxes = document.querySelectorAll('input[type="checkbox"]');
       checkboxes.forEach(function (checkbox) {
         const name = checkbox.value;
@@ -5652,14 +5669,17 @@
         textToSave += `${name}=${isChecked}\n`;
       });
 
-      // Add a separate line break
+      // Adding a Line break for Fomatting Data in Save File
       textToSave += "\n";
 
-      // Card A
-      var mysCardA = trimValue(document.getElementById("mysCardA").value);
+      // #Mystery - Card A & B Section      
+
+      // #Card A
+      var mysCardA = "card_a";
       var mysCAName = trimValue(document.getElementById("mysCAName").value);
 
-      if (mysCardA !== "" && mysCAName !== "") {
+      // Checks if Card A is not empty
+      if (mysCAName !== "") {
         textToSave += "[" + mysCardA + "]\n";
 
         var mysCATriggerValue = document.querySelector(
@@ -5715,7 +5735,7 @@
         textToSave += "\n";
       }
 
-      // Card B
+      // #Card B
       var mysCardB = trimValue(document.getElementById("mysCardB").value);
       var mysCBName = trimValue(document.getElementById("mysCBName").value);
 
@@ -5806,9 +5826,10 @@
       // Add a separate line break
       textToSave += "\n";
 
-      //Progress
+      // #Mystery Progress
 
-      var mysProgress = trimValue(document.getElementById("mysProgress").value);
+      // setting Progress Data Tag
+      var mysProgress = "progress";
       textToSave += "[" + mysProgress + "]\n";
 
       var mysProLoc = trimValue(document.getElementById("mysProLoc").value);
@@ -5819,15 +5840,17 @@
 
       // Progress Location 01
 
-      var mysProLoc01 = trimValue(document.getElementById("mysProLoc01").value);
-      textToSave = addValueToText(textToSave, "one_loc", mysProLoc01);
-
       var mysProTxt01 = trimValue(document.getElementById("mysProTxt01").value);
-      textToSave = addValueToText(textToSave, "one_txt", mysProTxt01);
 
-      var mysProfrc01 = trimValue(document.getElementById("mysProfrc01").value);
-      textToSave = addValueToText(textToSave, "one_txt", mysProfrc01);
+      if (mysProTxt01 !== "") {
+        var mysProLoc01 = trimValue(document.getElementById("mysProLoc01").value);
+        textToSave = addValueToText(textToSave, "one_loc", mysProLoc01);
 
+        textToSave = addValueToText(textToSave, "one_txt", mysProTxt01);
+
+        var mysProfrc01 = trimValue(document.getElementById("mysProfrc01").value);
+        textToSave = addValueToText(textToSave, "one_txt", mysProfrc01);
+      }
       // Progress Location 02
 
       var mysProTxt02 = trimValue(document.getElementById("mysProTxt02").value);
