@@ -101,11 +101,12 @@
 
       <!-- Mystery Art File Location -->
       <label for="mysArt">Mystery Art</label>
-      <input type="text" id="mysArt" placeholder="folder/mysArt.png"><br>
+      <input type="text" id="mysArt" placeholder="mystery_Name/mystery_Art.png"><br>
 
       <!-- Mystery Description -->
       <label for="mysDescription">Description:</label>
-      <input type="text" id="mysDescription" placeholder="The Story about bleh"><br><br>
+      <input type="text" id="mysDescription"
+        placeholder="Many users have found themselves captivated in making mods for a game."><br><br>
 
       <!-- Mystery Introduction Text -->
       <label for="introData">Introduction (can use ## to break line)</label><br>
@@ -118,6 +119,7 @@
       <!-- Custom BGM Selection -->
       <label for="mysBGM">Sound (For Custom you need to modify by hand)</label>
       <select id="mysBGM">
+        <option value="">Select Mystery Music</option>
         <option value="demon">Demon</option>
         <option value="forest">Forest</option>
         <option value="investigation">Investigation</option>
@@ -125,12 +127,16 @@
         <option value="school">School</option>
         <option value="seaside">Seaside</option>
         <option value="theme">Theme</option>
-        <option value="folder/name.ogg">Custom</option>
+        <option value="custom">Custom</option>
       </select><br>
+
+      <label for="mysBGM">Custom Sound Path for Music</label>
+      <input type="text" id="mysBGM_Custom" placeholder="Mystery_Name/Mystery_BGM.ogg">
 
       <!-- Custom Battle BGM Selection -->
       <label for="mysBattle">Battle (For Custom you need to modify by hand)</label>
       <select id="mysBattle">
+        <option value="">Select Battle Music</option>
         <option value="demon">Demon</option>
         <option value="forest">Forest</option>
         <option value="investigation">Investigation</option>
@@ -138,8 +144,11 @@
         <option value="school">School</option>
         <option value="seaside">Seaside</option>
         <option value="theme">Theme</option>
-        <option value="folder/name.ogg">Custom</option>
+        <option value="custom">Custom</option>
       </select><br>
+
+      <label for="mysBattle">Custom Sound Path for Battle Theme</label>
+      <input type="text" id="mysBattle_Custom" placeholder="Mystery_Name/Mystery_Battle.ogg">
 
       <!-- Restricted Locations -->
 
@@ -4658,7 +4667,7 @@
       <!-- Bonus Type A Selection of Reward -->
       <label for="chrTypeA">BONUS SECTION<br><br>Starting Bonus Type A (Optional)</label>
       <select id="chrTypeA">
-        <option value="">SELECT START BONUS A</option>
+        <option value="">SELECT BONUS TYPE A</option>
         <option value="">NO BONUS A</option>
         <option value="bullets">Bullets</option>
         <option value="cigarettes">Cigarettes</option>
@@ -4677,7 +4686,7 @@
       <input type="text" id="ChrBonusA_Value" placeholder="+2"><br>
 
       <!-- Bonus Type A Specific Reward from Selection -->
-      <label for="ChrBonusA_Curse">Curse Name A</label>
+      <label for="ChrBonusA_Curse">Curse A</label>
       <select id="ChrBonusA_Curse">
         <option value="">SELECT SPECIFIC CURSE</option>
         <option value="BLOOD FRENZY">BLOOD FRENZY</option>
@@ -4708,7 +4717,7 @@
       </select>
 
       <!-- Bonus Type A Specific Reward from Selection -->
-      <label for="ChrBonusA_Injury">Injury Name A</label>
+      <label for="ChrBonusA_Injury">Injury A</label>
       <select id="ChrBonusA_Injury">
         <option value="">SELECT SPECIFIC INJURY</option>
         <option value="BADLY BLEEDING">-MINOR- BADLY BLEEDING</value>
@@ -4740,7 +4749,7 @@
       </select>
 
       <!-- Bonus Type A Specific Reward from Selection -->
-      <label for="ChrBonusA_Item">Item Name A</label>
+      <label for="ChrBonusA_Item">Item A</label>
       <select id="ChrBonusA_Item">
         <option value="">SELECT SPECIFIC ITEM</option>
         <option value="AIKO'S PLUSH TOY">AIKO'S PLUSH TOY</option>
@@ -4898,7 +4907,7 @@
       </select>
 
       <!-- Bonus Type A Specific Reward from Selection -->
-      <label for="ChrBonusA_Spell">Spell Name A</label>
+      <label for="ChrBonusA_Spell">Spell A</label>
       <select id="ChrBonusA_Spell">
         <option value="">SELECT SPECIFIC SPELL</option>
         <option value="ABOLISH">ABOLISH</option>
@@ -4938,7 +4947,7 @@
       </select>
 
       <!-- Bonus Type A Specific Reward from Selection -->
-      <label for="ChrBonusA_Status">Status Name A</label>
+      <label for="ChrBonusA_Status">Status A</label>
       <select id="ChrBonusA_Status">
         <option value="">SELECT SPECIFIC STATUS</option>
         <option value="ALWAYS THERE">ALWAYS THERE</option>
@@ -4956,11 +4965,11 @@
         <option value="ON THE RUN">ON THE RUN</option>
         <option value="SAFETY IN NUMBERS">SAFETY IN NUMBERS</option>
         <option value="STABLE CONDITION">STABLE CONDITION</option>
-      </select>
+      </select><br><br>
 
-      <label for="chrTypeB">Starting Bonus Type B (Optional)</label>
+      <label for="chrTypeB">Starting Bonus B (Optional)</label>
       <select id="chrTypeB">
-        <option value="">SELECT START BONUS A</option>
+        <option value="">SELECT BONUS TYPE B</option>
         <option value="">NO BONUS A</option>
         <option value="bullets">Bullets</option>
         <option value="cigarettes">Cigarettes</option>
@@ -4978,7 +4987,7 @@
       <input type="text" id="ChrBonusB_Value" placeholder="+2"><br>
 
       <!-- Bonus Type B Specific Reward from Selection -->
-      <label for="ChrBonusB_Curse">Curse Name B</label>
+      <label for="ChrBonusB_Curse">Curse B</label>
       <select id="ChrBonusB_Curse">
         <option value="">SELECT SPECIFIC CURSE</option>
         <option value="BLOOD FRENZY">BLOOD FRENZY</option>
@@ -5009,7 +5018,7 @@
       </select>
 
       <!-- Bonus Type A Specific Reward from Selection -->
-      <label for="ChrBonusB_Injury">Injury Name B</label>
+      <label for="ChrBonusB_Injury">Injury B</label>
       <select id="ChrBonusB_Injury">
         <option value="">SELECT SPECIFIC INJURY</option>
         <option value="BADLY BLEEDING">-MINOR- BADLY BLEEDING</value>
@@ -5041,7 +5050,7 @@
       </select>
 
       <!-- Bonus Type A Specific Reward from Selection -->
-      <label for="ChrBonusB_Item">Item Name B</label>
+      <label for="ChrBonusB_Item">Item B</label>
       <select id="ChrBonusB_Item">
         <option value="">SELECT SPECIFIC ITEM</option>
         <option value="AIKO'S PLUSH TOY">AIKO'S PLUSH TOY</option>
@@ -5199,7 +5208,7 @@
       </select>
 
       <!-- Bonus Type A Specific Reward from Selection -->
-      <label for="ChrBonusB_Spell">Spell Name B</label>
+      <label for="ChrBonusB_Spell">Spell B</label>
       <select id="ChrBonusB_Spell">
         <option value="">SELECT SPECIFIC SPELL</option>
         <option value="ABOLISH">ABOLISH</option>
@@ -5239,7 +5248,7 @@
       </select>
 
       <!-- Bonus Type A Specific Reward from Selection -->
-      <label for="ChrBonusB_Status">Status Name B</label>
+      <label for="ChrBonusB_Status">Status B</label>
       <select id="ChrBonusB_Status">
         <option value="">SELECT SPECIFIC STATUS</option>
         <option value="ALWAYS THERE">ALWAYS THERE</option>
@@ -5262,10 +5271,20 @@
       <!-- LINKED EVENTS -->
 
       <label for="chrLINKED">LINKED EVENT INFO</label>
-      <label for="chrEventA">Linked Event A</label>
+
+      <label for="chrLink">How Many Linked Events?</label>
+      <input type="radio" name="chrLink" value="0" id="choice1" checked> None
+      <input type="radio" name="chrLink" value="2" id="choice2"> 1
+      <input type="radio" name="chrLink" value="3" id="choice3"> 2
+      <input type="radio" name="chrLink" value="3" id="choice3"> 3
+      <input type="radio" name="chrLink" value="3" id="choice3"> 4
+      <input type="radio" name="chrLink" value="3" id="choice3"> 5
+      <br>
+
+      <label for="chrEventA">Linked Event 1: A</label>
       <input type="text" id="chrEventA" placeholder="eventA.ito"><br>
 
-      <label for="chrLocA">Linked Location A</label>
+      <label for="chrLocA">Linked Location 1: A</label>
       <select id="chrLocA">
         <option value="apartment">Apartment</option>
         <option value="downtown">Downtown</option>
@@ -5305,10 +5324,10 @@
         -->
       </select>
 
-      <label for="chrEventB">Linked Event B</label>
+      <label for="chrEventB">Linked Event 2: B</label>
       <input type="text" id="chrEventB" placeholder="eventB.ito"><br>
 
-      <label for="chrLocB">Linked Location B</label>
+      <label for="chrLocB">Linked Location 2: B</label>
       <select id="chrLocB">
         <option value="apartment">Apartment</option>
         <option value="downtown">Downtown</option>
@@ -5348,10 +5367,10 @@
         -->
       </select>
 
-      <label for="chrEventC">Linked Event C</label>
+      <label for="chrEventC">Linked Event 3: C</label>
       <input type="text" id="chrEventC" placeholder="eventC.ito"><br>
 
-      <label for="chrLocC">Linked Location C</label>
+      <label for="chrLocC">Linked Location 3: C</label>
       <select id="chrLocC">
         <option value="apartment">Apartment</option>
         <option value="downtown">Downtown</option>
@@ -5391,10 +5410,10 @@
         -->
       </select>
 
-      <label for="chrEventD">Linked Event D</label>
+      <label for="chrEventD">Linked Event 4: D</label>
       <input type="text" id="chrEventD" placeholder="eventD.ito"><br>
 
-      <label for="chrLocD">Linked Location D</label>
+      <label for="chrLocD">Linked Location 4: D</label>
       <select id="chrLocD">
         <option value="apartment">Apartment</option>
         <option value="downtown">Downtown</option>
@@ -5434,10 +5453,10 @@
         -->
       </select>
 
-      <label for="chrEventE">Linked Event E</label>
+      <label for="chrEventE">Linked Event 5: E</label>
       <input type="text" id="chrEventE" placeholder="eventE.ito"><br>
 
-      <label for="chrLocE">Linked Location E</label>
+      <label for="chrLocE">Linked Location 5: E</label>
       <select id="chrLocE">
         <option value="apartment">Apartment</option>
         <option value="downtown">Downtown</option>
@@ -5594,11 +5613,29 @@
         textToSave = addValueToText(textToSave, "description", mysDescription);
       }
 
+      // Mystery Music & Battle Theme Selection
+
       var mysBGM = trimValue(document.getElementById("mysBGM").value);
-      textToSave = addValueToText(textToSave, "mystery_sound", mysBGM);
+      var mysBGM_Custom = trimValue(document.getElementById("mysBGM_Custom").value);
 
       var mysBattle = trimValue(document.getElementById("mysBattle").value);
-      textToSave = addValueToText(textToSave, "combat_sound", mysBattle);
+      var mysBattle_Custom = trimValue(document.getElementById("mysBattle_Custom").value);
+
+      if (mysBGM === "") {
+        // Empty Do Nothing
+      } else if (mysBGM !== "" && mysBGM !== "custom") {
+        textToSave = addValueToText(textToSave, "mystery_sound", mysBGM);
+      } else if (mysBGM === "custom") {
+        textToSave = addValueToText(textToSave, "mystery_sound", mysBGM_Custom);
+      }
+
+      if (mysBattle === "") {
+        // Empty Do Nothing
+      } else if (mysBattle !== "" && mysBattle !== "custom") {
+        textToSave = addValueToText(textToSave, "combat_sound", mysBattle);
+      } else if (mysBattle === "custom") {
+        textToSave = addValueToText(textToSave, "combat_sound", mysBattle_Custom);
+      }
 
       // Add a separate line break
       textToSave += "\n";
@@ -8849,322 +8886,426 @@
       textToSave = addValueToText(textToSave, "art02", enmArt2);
 
       textToSave = addValueToText(textToSave, "artfreq", enmFreq);
+    } else if (selectedOption === "character") {
+      // End of Enemy Script
+
+      // #Character Script
+      // Character Fields Variables
+
+      // Character Name
+      var chrName = trimValue(document.getElementById("chrName").value);
+      textToSave = addValueToText(textToSave, "name", chrName);
+
+      // Character Creator
+      var chrAuthor = trimValue(document.getElementById("chrAuthor").value);
+      textToSave = addValueToText(textToSave, "author", chrAuthor);
+
+      // Creator Contact
+      var chrContact = trimValue(document.getElementById("chrContact").value);
+      textToSave = addValueToText(textToSave, "contact", chrContact);
+
+      // Character Stats
+      // STR
+      var chrSTR = trimValue(document.getElementById("chrSTR").value);
+      textToSave = addValueToText(textToSave, "strength", chrSTR);
+
+      // DEX
+      var chrDEX = trimValue(document.getElementById("chrDEX").value);
+      textToSave = addValueToText(textToSave, "dexterity", chrDEX);
+
+      // PER
+      var chrPER = trimValue(document.getElementById("chrPER").value);
+      textToSave = addValueToText(textToSave, "perception", chrPER);
+
+      // CHA
+      var chrCHA = trimValue(document.getElementById("chrCHA").value);
+      textToSave = addValueToText(textToSave, "charisma", chrCHA);
+
+      // KNW
+      var chrKNW = trimValue(document.getElementById("chrKNW").value);
+      textToSave = addValueToText(textToSave, "knowledge", chrKNW);
+
+      // LCK
+      var chrLCK = trimValue(document.getElementById("chrLCK").value);
+      textToSave = addValueToText(textToSave, "luck", chrLCK);
+
+      // Sprite Icon
+      var chrIcon = trimValue(document.getElementById("chrIcon").value);
+      textToSave = addValueToText(textToSave, "sprite_icon", chrIcon);
+
+      // Sprite Back
+      var chrSpBack = trimValue(document.getElementById("chrSpBack").value);
+      textToSave = addValueToText(textToSave, "sprite_back", chrSpBack);
+
+      // Sprite House
+      var chrSpHome = trimValue(document.getElementById("chrSpHome").value);
+      textToSave = addValueToText(textToSave, "sprite_house", chrSpHome);
+
+      // Portrait A
+      var chrPorA = trimValue(document.getElementById("chrPorA").value);
+      textToSave = addValueToText(textToSave, "portrait_a", chrPorA);
+
+      // Name A
+      var chrNameA = trimValue(document.getElementById("chrNameA").value);
+      textToSave = addValueToText(textToSave, "name_a", chrNameA);
+
+      // Portrait B
+      var chrPorB = trimValue(document.getElementById("chrPorB").value);
+      textToSave = addValueToText(textToSave, "portrait_b", chrPorB);
+
+      // Name B
+      var chrNameB = trimValue(document.getElementById("chrNameB").value);
+      textToSave = addValueToText(textToSave, "name_b", chrNameB);
+
+      // Sprite Chibi
+      var chrSpChibi = trimValue(document.getElementById("chrSpChibi").value);
+      textToSave = addValueToText(textToSave, "sprite_chibi", chrSpChibi);
+
+      // Menu Tag
+      var chrMenuTag = trimValue(document.getElementById("chrMenuTag").value);
+      textToSave = addValueToText(textToSave, "menu_tag", chrMenuTag);
+
+      // Menu Description
+      var chrMenuDesc = trimValue(document.getElementById("chrMenuDesc").value);
+      textToSave = addValueToText(textToSave, "menu_desc", chrMenuDesc);
+
+      // Perkpack A & B
+      var chrPerkPA = trimValue(document.getElementById("chrPerkPA").value);
+      var chrPerkPB = trimValue(document.getElementById("chrPerkPB").value);
+
+      if (chrPerkPA === "") {
+        // hotfix
+      } else if (chrPerkPA !== "") {
+        textToSave = addValueToText(textToSave, "perkpack_a", chrPerkPA);
+      } else if (chrPerkPA === chrPerkPB) {
+        alert("You have picked the same Perk Pack for A and B. Please recheck your values, .ito will continue to save but will be broken.");
+      } else if (chrPerkPA !== chrPerkPB) {
+        textToSave = addValueToText(textToSave, "perkpack_b", chrPerkPB);
+      }
+
+      // Add a separate line break
+      textToSave += "\n";
+
+      var chrStatus = "Status";
+      textToSave += "[" + chrStatus + "]\n";
+
+      // Low Stamina
+      var chrLStam = trimValue(document.getElementById("chrLStam").value);
+      textToSave = addValueToText(textToSave, "low_stamina", chrLStam);
+
+      // Low Reason
+      var chrLRea = trimValue(document.getElementById("chrLRea").value);
+      textToSave = addValueToText(textToSave, "low_reason", chrLRea);
+
+      // Ritual Mask
+      var chrRitualM = trimValue(document.getElementById("chrRitualM").value);
+      textToSave = addValueToText(textToSave, "ritual_mask", chrRitualM);
+
+      // Karukosa Mask
+      var chrKarukosaM = trimValue(document.getElementById("chrKarukosaM").value);
+      textToSave = addValueToText(textToSave, "karukosa_mask", chrKarukosaM);
+
+      // Crestfallen Mask
+      var chrCrestFM = trimValue(document.getElementById("chrCrestFM").value);
+      textToSave = addValueToText(textToSave, "crestfallen_mask", chrCrestFM);
+
+      // Cursed Signs
+      var chrCursedS = trimValue(document.getElementById("chrCursedS").value);
+      textToSave = addValueToText(textToSave, "cursed_signs", chrCursedS);
+
+      // Broken Nose
+      var chrBrokeN = trimValue(document.getElementById("chrBrokeN").value);
+      textToSave = addValueToText(textToSave, "broken_nose", chrBrokeN);
+
+      // Insmasu Look
+      var chrInsmasu = trimValue(document.getElementById("chrInsmasu").value);
+      textToSave = addValueToText(textToSave, "insmasu_look", chrInsmasu);
+
+      // Slit Mouth
+      var chrSlitM = trimValue(document.getElementById("chrSlitM").value);
+      textToSave = addValueToText(textToSave, "slit_mouth", chrSlitM);
+
+      // Hunger
+      var chrHunger = trimValue(document.getElementById("chrHunger").value);
+      textToSave = addValueToText(textToSave, "hunger", chrHunger);
+
+      // #BONUS
+      // OPTIONAL BONUS START ITEMS
+
+      // Type A Variables
+      var chrTypeA = trimValue(document.getElementById("chrTypeA").value);
+      var ChrBonusA_Value = trimValue(document.getElementById("ChrBonusA_Value").value);
+      var ChrBonusA_Curse = trimValue(document.getElementById("ChrBonusA_Curse").value);
+      var ChrBonusA_Injury = trimValue(document.getElementById("ChrBonusA_Injury").value);
+      var ChrBonusA_Item = trimValue(document.getElementById("ChrBonusA_Item").value);
+      var ChrBonusA_Spell = trimValue(document.getElementById("ChrBonusA_Spell").value);
+      var ChrBonusA_Status = trimValue(document.getElementById("ChrBonusA_Status").value);
+
+      // Checks to see if TypeA is active before saving to document
+
+      if (chrTypeA !== "") {
+        textToSave += "\n";
+
+        var chrBonus = "starting_bonus";
+        textToSave += "[" + chrBonus + "]\n";
+      }
+
+      // Name A Code
+      if (chrTypeA === "") {
+        //Don't Record Anything
+      } else if (
+        chrTypeA === "bullets" ||
+        chrTypeA === "cigarettes" ||
+        chrTypeA === "doom" ||
+        chrTypeA === "funds"
+      ) {
+        textToSave = addValueToText(textToSave, "type_a", chrTypeA);
+        textToSave = addValueToText(textToSave, "name_a", ChrBonusA_Value);
+      } else if (
+        chrTypeA === "curse"
+      ) {
+        textToSave = addValueToText(textToSave, "type_a", chrTypeA);
+        textToSave = addValueToText(textToSave, "name_a", ChrBonusA_Curse);
+      } else if (
+        chrTypeA === "injury"
+      ) {
+        textToSave = addValueToText(textToSave, "type_a", chrTypeA);
+        textToSave = addValueToText(textToSave, "name_a", ChrBonusA_Injury);
+      } else if (
+        chrTypeA === "item"
+      ) {
+        textToSave = addValueToText(textToSave, "type_a", chrTypeA);
+        textToSave = addValueToText(textToSave, "name_a", ChrBonusA_Item);
+      } else if (
+        chrTypeA === "spell"
+      ) {
+        textToSave = addValueToText(textToSave, "type_a", chrTypeA);
+        textToSave = addValueToText(textToSave, "name_a", ChrBonusA_Spell);
+      } else if (
+        chrTypeA === "status"
+      ) {
+        textToSave = addValueToText(textToSave, "type_a", chrTypeA);
+        textToSave = addValueToText(textToSave, "name_a", ChrBonusA_Status);
+      }
+
+      // Type B Variables
+      var chrTypeB = trimValue(document.getElementById("chrTypeB").value);
+      var ChrBonusB_Value = trimValue(document.getElementById("ChrBonusB_Value").value);
+      var ChrBonusB_Curse = trimValue(document.getElementById("ChrBonusB_Curse").value);
+      var ChrBonusB_Injury = trimValue(document.getElementById("ChrBonusB_Injury").value);
+      var ChrBonusB_Item = trimValue(document.getElementById("ChrBonusB_Item").value);
+      var ChrBonusB_Spell = trimValue(document.getElementById("ChrBonusB_Spell").value);
+      var ChrBonusB_Status = trimValue(document.getElementById("ChrBonusB_Status").value);
+
+      // Name B Code
+
+      if (chrTypeA === "") {
+        //Don't Record Anything
+      } else if (chrTypeB === "") {
+        //Don't Record Anything
+      } else if (
+        chrTypeB === "bullets" ||
+        chrTypeB === "cigarettes" ||
+        chrTypeB === "doom" ||
+        chrTypeB === "funds"
+      ) {
+        textToSave = addValueToText(textToSave, "type_b", chrTypeB);
+        textToSave = addValueToText(textToSave, "name_b", ChrBonusB_Value);
+      } else if (
+        chrTypeB === "curse"
+      ) {
+        if (ChrBonusA_Curse === ChrBonusB_Curse) {
+          alert("You have picked the same value twice for Bonus A and Bonus B. Please check your values, .ito will continue to save but will be broken.");
+        } else if (ChrBonusA_Curse !== ChrBonusB_Curse) {
+          textToSave = addValueToText(textToSave, "type_b", chrTypeB);
+          textToSave = addValueToText(textToSave, "name_b", ChrBonusB_Curse);
+        }
+      } else if (
+        chrTypeB === "injury"
+      ) {
+        if (ChrBonusA_Injury === ChrBonusB_Injury) {
+          alert("You have picked the same value twice for Bonus A and Bonus B. Please check your values, .ito will continue to save but will be broken.");
+        } else if (ChrBonusA_Injury !== ChrBonusB_Injury) {
+          textToSave = addValueToText(textToSave, "type_b", chrTypeB);
+          textToSave = addValueToText(textToSave, "name_b", ChrBonusB_Injury);
+        }
+      } else if (
+        chrTypeB === "item"
+      ) {
+        if (ChrBonusA_Item === ChrBonusB_Item) {
+          alert("You have picked the same value twice for Bonus A and Bonus B. Please check your values, .ito will continue to save but will be broken.");
+        } else if (ChrBonusA_Item !== ChrBonusB_Item) {
+          textToSave = addValueToText(textToSave, "type_b", chrTypeB);
+          textToSave = addValueToText(textToSave, "name_b", ChrBonusB_Item);
+        }
+      } else if (
+        chrTypeB === "spell"
+      ) {
+        if (ChrBonusA_Spell === ChrBonusB_Spell) {
+          alert("You have picked the same value twice for Bonus A and Bonus B. Please check your values, .ito will continue to save but will be broken.");
+        } else if (ChrBonusA_Spell !== ChrBonusB_Spell) {
+          textToSave = addValueToText(textToSave, "type_b", chrTypeB);
+          textToSave = addValueToText(textToSave, "name_b", ChrBonusB_Spell);
+        }
+      } else if (
+        chrTypeB === "status"
+      ) {
+        if (ChrBonusA_Status === ChrBonusB_Status) {
+          alert("You have picked the same value twice for Bonus A and Bonus B. Please check your values, .ito will continue to save but will be broken.");
+        } else if (ChrBonusA_Status !== ChrBonusB_Status) {
+          textToSave = addValueToText(textToSave, "type_b", chrTypeB);
+          textToSave = addValueToText(textToSave, "name_b", ChrBonusB_Status);
+        }
+      }
+
+      // Add a separate line break
+      textToSave += "\n";
+
+      //#LINKED EVENTS
+      var chrLink = document.querySelector('input[name="chrLink"]:checked');
+      var chrLink_Value = chrLink ? chrLink.value : "";
+
+      if (chrLink_Value === "0") {
+        //Empty Do Nothing
+      } else if (chrLink_Value === "1") {
+        var chrLinked = "linked_events";
+        textToSave += "[" + chrLinked + "]\n";
+
+        // Event A
+        var chrEventA = trimValue(document.getElementById("chrEventA").value);
+        textToSave = addValueToText(textToSave, "event_a", chrEventA);
+
+        // Location A
+        var chrLocA = trimValue(document.getElementById("chrLocA").value);
+        textToSave = addValueToText(textToSave, "location_a", chrLocA);
+      } else if (chrLink_Value === "2") {
+        var chrLinked = "linked_events";
+        textToSave += "[" + chrLinked + "]\n";
+
+        // Event A
+        var chrEventA = trimValue(document.getElementById("chrEventA").value);
+        textToSave = addValueToText(textToSave, "event_a", chrEventA);
+
+        // Location A
+        var chrLocA = trimValue(document.getElementById("chrLocA").value);
+        textToSave = addValueToText(textToSave, "location_a", chrLocA);
+
+        // Event B
+        var chrEventB = trimValue(document.getElementById("chrEventB").value);
+        textToSave = addValueToText(textToSave, "event_b", chrEventA);
+
+        // Location B
+        var chrLocB = trimValue(document.getElementById("chrLocB").value);
+        textToSave = addValueToText(textToSave, "location_b", chrLocB);
+      } else if (chrLink_Value === "3") {
+        var chrLinked = "linked_events";
+        textToSave += "[" + chrLinked + "]\n";
+
+        // Event A
+        var chrEventA = trimValue(document.getElementById("chrEventA").value);
+        textToSave = addValueToText(textToSave, "event_a", chrEventA);
+
+        // Location A
+        var chrLocA = trimValue(document.getElementById("chrLocA").value);
+        textToSave = addValueToText(textToSave, "location_a", chrLocA);
+
+        // Event B
+        var chrEventB = trimValue(document.getElementById("chrEventB").value);
+        textToSave = addValueToText(textToSave, "event_b", chrEventA);
+
+        // Location B
+        var chrLocB = trimValue(document.getElementById("chrLocB").value);
+        textToSave = addValueToText(textToSave, "location_b", chrLocB);
+
+        // Event C
+        var chrEventC = trimValue(document.getElementById("chrEventC").value);
+        textToSave = addValueToText(textToSave, "event_c", chrEventC);
+
+        // Location C
+        var chrLocC = trimValue(document.getElementById("chrLocC").value);
+        textToSave = addValueToText(textToSave, "location_c", chrLocC);
+      } else if (chrLink_Value === "4") {
+        var chrLinked = "linked_events";
+        textToSave += "[" + chrLinked + "]\n";
+
+        // Event A
+        var chrEventA = trimValue(document.getElementById("chrEventA").value);
+        textToSave = addValueToText(textToSave, "event_a", chrEventA);
+
+        // Location A
+        var chrLocA = trimValue(document.getElementById("chrLocA").value);
+        textToSave = addValueToText(textToSave, "location_a", chrLocA);
+
+        // Event B
+        var chrEventB = trimValue(document.getElementById("chrEventB").value);
+        textToSave = addValueToText(textToSave, "event_b", chrEventA);
+
+        // Location B
+        var chrLocB = trimValue(document.getElementById("chrLocB").value);
+        textToSave = addValueToText(textToSave, "location_b", chrLocB);
+
+        // Event C
+        var chrEventC = trimValue(document.getElementById("chrEventC").value);
+        textToSave = addValueToText(textToSave, "event_c", chrEventC);
+
+        // Location C
+        var chrLocC = trimValue(document.getElementById("chrLocC").value);
+        textToSave = addValueToText(textToSave, "location_c", chrLocC);
+
+        // Event D
+        var chrEventD = trimValue(document.getElementById("chrEventD").value);
+        textToSave = addValueToText(textToSave, "event_d", chrEventD);
+
+        // Location D
+        var chrLocD = trimValue(document.getElementById("chrLocD").value);
+        textToSave = addValueToText(textToSave, "location_d", chrLocD);
+      } else if (chrLink_Value === "5") {
+        var chrLinked = "linked_events";
+        textToSave += "[" + chrLinked + "]\n";
+
+        // Event A
+        var chrEventA = trimValue(document.getElementById("chrEventA").value);
+        textToSave = addValueToText(textToSave, "event_a", chrEventA);
+
+        // Location A
+        var chrLocA = trimValue(document.getElementById("chrLocA").value);
+        textToSave = addValueToText(textToSave, "location_a", chrLocA);
+
+        // Event B
+        var chrEventB = trimValue(document.getElementById("chrEventB").value);
+        textToSave = addValueToText(textToSave, "event_b", chrEventA);
+
+        // Location B
+        var chrLocB = trimValue(document.getElementById("chrLocB").value);
+        textToSave = addValueToText(textToSave, "location_b", chrLocB);
+
+        // Event C
+        var chrEventC = trimValue(document.getElementById("chrEventC").value);
+        textToSave = addValueToText(textToSave, "event_c", chrEventC);
+
+        // Location C
+        var chrLocC = trimValue(document.getElementById("chrLocC").value);
+        textToSave = addValueToText(textToSave, "location_c", chrLocC);
+
+        // Event D
+        var chrEventD = trimValue(document.getElementById("chrEventD").value);
+        textToSave = addValueToText(textToSave, "event_d", chrEventD);
+
+        // Location D
+        var chrLocD = trimValue(document.getElementById("chrLocD").value);
+        textToSave = addValueToText(textToSave, "location_d", chrLocD);
+
+        // Event E
+        var chrEventE = trimValue(document.getElementById("chrEventE").value);
+        textToSave = addValueToText(textToSave, "event_e", chrEventE);
+
+        // Location E
+        var chrLocE = trimValue(document.getElementById("chrLocE").value);
+        textToSave = addValueToText(textToSave, "location_e", chrLocE);
+      }
+
+      // End Character Script
     }
-    // End of Enemy Script
-
-    // #Character Script
-    // Character Fields Variables
-
-    // Character Name
-    var chrName = trimValue(document.getElementById("chrName").value);
-    textToSave = addValueToText(textToSave, "name", chrName);
-
-    // Character Creator
-    var chrAuthor = trimValue(document.getElementById("chrAuthor").value);
-    textToSave = addValueToText(textToSave, "author", chrAuthor);
-
-    // Creator Contact
-    var chrContact = trimValue(document.getElementById("chrContact").value);
-    textToSave = addValueToText(textToSave, "contact", chrContact);
-
-    // Character Stats
-    // STR
-    var chrSTR = trimValue(document.getElementById("chrSTR").value);
-    textToSave = addValueToText(textToSave, "strength", chrSTR);
-
-    // DEX
-    var chrDEX = trimValue(document.getElementById("chrDEX").value);
-    textToSave = addValueToText(textToSave, "dexterity", chrDEX);
-
-    // PER
-    var chrPER = trimValue(document.getElementById("chrPER").value);
-    textToSave = addValueToText(textToSave, "perception", chrPER);
-
-    // CHA
-    var chrCHA = trimValue(document.getElementById("chrCHA").value);
-    textToSave = addValueToText(textToSave, "charisma", chrCHA);
-
-    // KNW
-    var chrKNW = trimValue(document.getElementById("chrKNW").value);
-    textToSave = addValueToText(textToSave, "knowledge", chrKNW);
-
-    // LCK
-    var chrLCK = trimValue(document.getElementById("chrLCK").value);
-    textToSave = addValueToText(textToSave, "luck", chrLCK);
-
-    // Sprite Icon
-    var chrIcon = trimValue(document.getElementById("chrIcon").value);
-    textToSave = addValueToText(textToSave, "sprite_icon", chrIcon);
-
-    // Sprite Back
-    var chrSpBack = trimValue(document.getElementById("chrSpBack").value);
-    textToSave = addValueToText(textToSave, "sprite_back", chrSpBack);
-
-    // Sprite House
-    var chrSpHome = trimValue(document.getElementById("chrSpHome").value);
-    textToSave = addValueToText(textToSave, "sprite_house", chrSpHome);
-
-    // Portrait A
-    var chrPorA = trimValue(document.getElementById("chrPorA").value);
-    textToSave = addValueToText(textToSave, "portrait_a", chrPorA);
-
-    // Name A
-    var chrNameA = trimValue(document.getElementById("chrNameA").value);
-    textToSave = addValueToText(textToSave, "name_a", chrNameA);
-
-    // Portrait B
-    var chrPorB = trimValue(document.getElementById("chrPorB").value);
-    textToSave = addValueToText(textToSave, "portrait_b", chrPorB);
-
-    // Name B
-    var chrNameB = trimValue(document.getElementById("chrNameB").value);
-    textToSave = addValueToText(textToSave, "name_b", chrNameB);
-
-    // Sprite Chibi
-    var chrSpChibi = trimValue(document.getElementById("chrSpChibi").value);
-    textToSave = addValueToText(textToSave, "sprite_chibi", chrSpChibi);
-
-    // Menu Tag
-    var chrMenuTag = trimValue(document.getElementById("chrMenuTag").value);
-    textToSave = addValueToText(textToSave, "menu_tag", chrMenuTag);
-
-    // Menu Description
-    var chrMenuDesc = trimValue(document.getElementById("chrMenuDesc").value);
-    textToSave = addValueToText(textToSave, "menu_desc", chrMenuDesc);
-
-    // Perkpack A & B
-    var chrPerkPA = trimValue(document.getElementById("chrPerkPA").value);
-    var chrPerkPB = trimValue(document.getElementById("chrPerkPB").value);
-
-    if (chrPerkPA === ""){
-      // hotfix
-    } else if (chrPerkPA !==""){
-      textToSave = addValueToText(textToSave, "perkpack_a", chrPerkPA);
-    } else if (chrPerkPA === chrPerkPB){
-      alert("You have picked the same Perk Pack for A and B. Please recheck your values, .ito will continue to save but will be broken.");
-    } else if (chrPerkPA !== chrPerkPB){
-      textToSave = addValueToText(textToSave, "perkpack_b", chrPerkPB);
-    }
-
-    // Add a separate line break
-    textToSave += "\n";
-
-    var chrStatus = "Status";
-    textToSave += "[" + chrStatus + "]\n";
-
-    // Low Stamina
-    var chrLStam = trimValue(document.getElementById("chrLStam").value);
-    textToSave = addValueToText(textToSave, "low_stamina", chrLStam);
-
-    // Low Reason
-    var chrLRea = trimValue(document.getElementById("chrLRea").value);
-    textToSave = addValueToText(textToSave, "low_reason", chrLRea);
-
-    // Ritual Mask
-    var chrRitualM = trimValue(document.getElementById("chrRitualM").value);
-    textToSave = addValueToText(textToSave, "ritual_mask", chrRitualM);
-
-    // Karukosa Mask
-    var chrKarukosaM = trimValue(document.getElementById("chrKarukosaM").value);
-    textToSave = addValueToText(textToSave, "karukosa_mask", chrKarukosaM);
-
-    // Crestfallen Mask
-    var chrCrestFM = trimValue(document.getElementById("chrCrestFM").value);
-    textToSave = addValueToText(textToSave, "crestfallen_mask", chrCrestFM);
-
-    // Cursed Signs
-    var chrCursedS = trimValue(document.getElementById("chrCursedS").value);
-    textToSave = addValueToText(textToSave, "cursed_signs", chrCursedS);
-
-    // Broken Nose
-    var chrBrokeN = trimValue(document.getElementById("chrBrokeN").value);
-    textToSave = addValueToText(textToSave, "broken_nose", chrBrokeN);
-
-    // Insmasu Look
-    var chrInsmasu = trimValue(document.getElementById("chrInsmasu").value);
-    textToSave = addValueToText(textToSave, "insmasu_look", chrInsmasu);
-
-    // Slit Mouth
-    var chrSlitM = trimValue(document.getElementById("chrSlitM").value);
-    textToSave = addValueToText(textToSave, "slit_mouth", chrSlitM);
-
-    // Hunger
-    var chrHunger = trimValue(document.getElementById("chrHunger").value);
-    textToSave = addValueToText(textToSave, "hunger", chrHunger);
-
-    // #BONUS
-    // Add a separate line break
-    textToSave += "\n";
-
-    var chrBonus = "starting_bonus";
-    textToSave += "[" + chrBonus + "]\n";
-
-    // OPTIONAL BONUS START ITEMS
-
-    // Type A Variables
-    var chrTypeA = trimValue(document.getElementById("chrTypeA").value);
-    var ChrBonusA_Value = trimValue(document.getElementById("ChrBonusA_Value").value);
-    var ChrBonusA_Curse = trimValue(document.getElementById("ChrBonusA_Curse").value);
-    var ChrBonusA_Injury = trimValue(document.getElementById("ChrBonusA_Injury").value);
-    var ChrBonusA_Item = trimValue(document.getElementById("ChrBonusA_Item").value);
-    var ChrBonusA_Spell = trimValue(document.getElementById("ChrBonusA_Spell").value);
-    var ChrBonusA_Status = trimValue(document.getElementById("ChrBonusA_Status").value);
-
-    // Name A Code
-    if (chrTypeA === ""){
-      //Don't Record Anything
-    } else if (
-      chrTypeA === "bullets" ||
-      chrTypeA === "cigarettes" ||
-      chrTypeA === "doom" ||
-      chrTypeA === "funds"
-    ){
-      textToSave = addValueToText(textToSave, "type_a", chrTypeA);
-      textToSave = addValueToText(textToSave, "name_a", ChrBonusA_Value);
-    } else if (
-      chrTypeA === "curse"
-    ){
-      textToSave = addValueToText(textToSave, "type_a", chrTypeA);
-      textToSave = addValueToText(textToSave, "name_a", ChrBonusA_Curse);
-    } else if (
-      chrTypeA === "injury"
-    ){
-      textToSave = addValueToText(textToSave, "type_a", chrTypeA);
-      textToSave = addValueToText(textToSave, "name_a", ChrBonusA_Injury);
-    } else if (
-      chrTypeA === "item"
-    ){
-      textToSave = addValueToText(textToSave, "type_a", chrTypeA);
-      textToSave = addValueToText(textToSave, "name_a", ChrBonusA_Item);
-    } else if (
-      chrTypeA === "spell"
-    ){
-      textToSave = addValueToText(textToSave, "type_a", chrTypeA);
-      textToSave = addValueToText(textToSave, "name_a", ChrBonusA_Spell);
-    } else if (
-      chrTypeA === "status"
-    ){
-      textToSave = addValueToText(textToSave, "type_a", chrTypeA);
-      textToSave = addValueToText(textToSave, "name_a", ChrBonusA_Status);
-    }
-
-    // Type B Variables
-    var chrTypeB = trimValue(document.getElementById("chrTypeB").value);
-    var ChrBonusB_Value = trimValue(document.getElementById("ChrBonusB_Value").value);
-    var ChrBonusB_Curse = trimValue(document.getElementById("ChrBonusB_Curse").value);
-    var ChrBonusB_Injury = trimValue(document.getElementById("ChrBonusB_Injury").value);
-    var ChrBonusB_Item = trimValue(document.getElementById("ChrBonusB_Item").value);
-    var ChrBonusB_Spell = trimValue(document.getElementById("ChrBonusB_Spell").value);
-    var ChrBonusB_Status = trimValue(document.getElementById("ChrBonusB_Status").value);
-    
-    // Name B Code
-
-    if (chrTypeA === ""){
-      //Don't Record Anything
-    } else if (
-      chrTypeB === "bullets" ||
-      chrTypeB === "cigarettes" ||
-      chrTypeB === "doom" ||
-      chrTypeB === "funds"
-    ){
-    textToSave = addValueToText(textToSave, "type_b", chrTypeB);
-    textToSave = addValueToText(textToSave, "name_b", ChrBonusB_Value);
-    } else if (
-      chrTypeB === "curse"
-    ){
-      if (ChrBonusA_Curse === ChrBonusB_Curse){
-        alert("You have picked the same value twice for Bonus A and Bonus B. Please check your values, .ito will continue to save but will be broken.");
-      } else if (ChrBonusA_Curse !== ChrBonusB_Curse){
-        textToSave = addValueToText(textToSave, "type_b", chrTypeB);
-        textToSave = addValueToText(textToSave, "name_b", ChrBonusB_Curse);
-      }
-    } else if (
-      chrTypeB === "injury"
-    ){
-      if (ChrBonusA_Injury === ChrBonusB_Injury){
-        alert("You have picked the same value twice for Bonus A and Bonus B. Please check your values, .ito will continue to save but will be broken.");
-      } else if (ChrBonusA_Injury !== ChrBonusB_Injury){
-        textToSave = addValueToText(textToSave, "type_b", chrTypeB);
-        textToSave = addValueToText(textToSave, "name_b", ChrBonusB_Injury);
-      }
-    } else if (
-      chrTypeB === "item"
-    ){
-      if (ChrBonusA_Item === ChrBonusB_Item){
-        alert("You have picked the same value twice for Bonus A and Bonus B. Please check your values, .ito will continue to save but will be broken.");
-      } else if (ChrBonusA_Item !== ChrBonusB_Item){
-        textToSave = addValueToText(textToSave, "type_b", chrTypeB);
-        textToSave = addValueToText(textToSave, "name_b", ChrBonusB_Item);
-      }
-    } else if (
-      chrTypeB === "spell"
-    ){
-      if (ChrBonusA_Spell === ChrBonusB_Spell){
-        alert("You have picked the same value twice for Bonus A and Bonus B. Please check your values, .ito will continue to save but will be broken.");
-      } else if (ChrBonusA_Spell !== ChrBonusB_Spell){
-        textToSave = addValueToText(textToSave, "type_b", chrTypeB);
-        textToSave = addValueToText(textToSave, "name_b", ChrBonusB_Spell);
-      }
-    } else if (
-      chrTypeB === "status"
-    ){
-      if (ChrBonusA_Status === ChrBonusB_Status){
-        alert("You have picked the same value twice for Bonus A and Bonus B. Please check your values, .ito will continue to save but will be broken.");
-      } else if (ChrBonusA_Status !== ChrBonusB_Status){
-        textToSave = addValueToText(textToSave, "type_b", chrTypeB);
-        textToSave = addValueToText(textToSave, "name_b", ChrBonusB_Status);
-      }
-    }
-
-    // Add a separate line break
-    textToSave += "\n";
-
-    //LINKED EVENTS
-
-    var chrLinked = "linked_events";
-    textToSave += "[" + chrLinked + "]\n";
-
-    // Event A
-    var chrEventA = trimValue(document.getElementById("chrEventA").value);
-    textToSave = addValueToText(textToSave, "event_a", chrEventA);
-
-    // Location A
-    var chrLocA = trimValue(document.getElementById("chrLocA").value);
-    textToSave = addValueToText(textToSave, "location_a", chrLocA);
-
-    // Event B
-    var chrEventB = trimValue(document.getElementById("chrEventB").value);
-    textToSave = addValueToText(textToSave, "event_b", chrEventA);
-
-    // Location B
-    var chrLocB = trimValue(document.getElementById("chrLocB").value);
-    textToSave = addValueToText(textToSave, "location_b", chrLocB);
-
-    // Event C
-    var chrEventC = trimValue(document.getElementById("chrEventC").value);
-    textToSave = addValueToText(textToSave, "event_c", chrEventC);
-
-    // Location C
-    var chrLocC = trimValue(document.getElementById("chrLocC").value);
-    textToSave = addValueToText(textToSave, "location_c", chrLocC);
-
-    // Event D
-    var chrEventD = trimValue(document.getElementById("chrEventD").value);
-    textToSave = addValueToText(textToSave, "event_d", chrEventD);
-
-    // Location D
-    var chrLocD = trimValue(document.getElementById("chrLocD").value);
-    textToSave = addValueToText(textToSave, "location_d", chrLocD);
-
-    // Event E
-    var chrEventE = trimValue(document.getElementById("chrEventE").value);
-    textToSave = addValueToText(textToSave, "event_e", chrEventE);
-
-    // Location E
-    var chrLocE = trimValue(document.getElementById("chrLocE").value);
-    textToSave = addValueToText(textToSave, "location_e", chrLocE);
-
-    // End Character Script
 
     var blob = new Blob([textToSave], { type: "text/plain" });
     var a = document.createElement("a");
