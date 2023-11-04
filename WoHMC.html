@@ -85,29 +85,37 @@
     <div id="mysteryFields" style="display: none">
       <!-- Start of the "mystery" option -->
 
-      <!-- Mystery -->
+      <!-- #Mystery -->
 
+      <!-- Name Input -->
       <label for="mysName">Mystery Name:</label>
       <input type="text" id="mysName" placeholder="A Something Something of a Something Something"><br>
 
+      <!-- Creator Name Input -->
       <label for="mysAuthor">Creator:</label>
       <input type="text" id="mysAuthor" placeholder="Mortal Pixel"><br><br>
 
+      <!-- Creator Contact Input -->
       <label for="mysContact">Contact:</label>
       <input type="text" id="mysContact" placeholder="@MortalPixel"><br><br>
 
+      <!-- Mystery Art File Location -->
       <label for="mysArt">Mystery Art</label>
       <input type="text" id="mysArt" placeholder="folder/mysArt.png"><br>
 
+      <!-- Mystery Description -->
       <label for="mysDescription">Description:</label>
       <input type="text" id="mysDescription" placeholder="The Story about bleh"><br><br>
 
+      <!-- Mystery Introduction Text -->
       <label for="introData">Introduction (can use ## to break line)</label><br>
       <textarea id="intro" placeholder="Intro"></textarea><br>
 
+      <!-- Custom UI Art-->
       <label for="mysCUI">Custom UI:</label>
       <input type="text" id="mysCUI" placeholder="folder/mysCUI.png"><br>
 
+      <!-- Custom BGM Selection -->
       <label for="mysBGM">Sound (For Custom you need to modify by hand)</label>
       <select id="mysBGM">
         <option value="demon">Demon</option>
@@ -120,6 +128,7 @@
         <option value="folder/name.ogg">Custom</option>
       </select><br>
 
+      <!-- Custom Battle BGM Selection -->
       <label for="mysBattle">Battle (For Custom you need to modify by hand)</label>
       <select id="mysBattle">
         <option value="demon">Demon</option>
@@ -133,8 +142,6 @@
       </select><br>
 
       <!-- Restricted Locations -->
-
-      <input type="hidden" id="mysPreRes" value="restricted_locations">
 
       <label for="mysRestricted">Restricted Locations<br>Note: Selected locations will be blacked-out and
         inaccessible.</label><br>
@@ -686,8 +693,9 @@
     </div>
     <!-- Start of the "event" option -->
     <div id="eventFields" style="display: none">
+      <!-- Start of the "mystery" option -->
 
-      <!-- Define inputs for "event" fields here -->
+      <!-- #Event -->
 
       <!-- Name Set Up -->
 
@@ -4259,6 +4267,9 @@
 
     <!-- Fields for the "enemy" option -->
     <div id="enemyFields" style="display: none">
+      <!-- Start of the "Enemy" Options-->
+
+      <!-- #Enemy -->
 
       <label for="enmName">Enemy Name:</label>
       <input type="text" id="enmName" placeholder="CREATOR OF MODS (15 character limit)"><br>
@@ -5594,7 +5605,7 @@
 
       // Restricted Locations
 
-      var mysPreRes = trimValue(document.getElementById("mysPreRes").value);
+      var mysPreRes = "restricted_locations";
       textToSave += "[" + mysPreRes + "]\n";
 
       const checkboxes = document.querySelectorAll('input[type="checkbox"]');
@@ -8925,7 +8936,9 @@
     var chrPerkPA = trimValue(document.getElementById("chrPerkPA").value);
     var chrPerkPB = trimValue(document.getElementById("chrPerkPB").value);
 
-    if (chrPerkPA !==""){
+    if (chrPerkPA === ""){
+      // hotfix
+    } else if (chrPerkPA !==""){
       textToSave = addValueToText(textToSave, "perkpack_a", chrPerkPA);
     } else if (chrPerkPA === chrPerkPB){
       alert("You have picked the same Perk Pack for A and B. Please recheck your values, .ito will continue to save but will be broken.");
